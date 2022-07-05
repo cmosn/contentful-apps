@@ -6,7 +6,7 @@ import productPreviews from '../__mocks__/productPreviews';
 const defaultProps: Props = {
   disabled: false,
   productPreviews,
-  deleteFn: jest.fn()
+  deleteFn: jest.fn(),
 };
 
 const renderComponent = (props: Props) => {
@@ -16,14 +16,15 @@ const renderComponent = (props: Props) => {
 jest.mock('react-sortable-hoc', () => ({
   SortableContainer: (x: any) => x,
   SortableElement: (x: any) => x,
-  SortableHandle: (x: any) => x
+  SortableHandle: (x: any) => x,
 }));
 
 describe('SortableList', () => {
   afterEach(cleanup);
 
   it('should render successfully', async () => {
-    const component = renderComponent(defaultProps);
-    expect(component.container).toMatchSnapshot();
+    const { queryAllByTestId } = renderComponent(defaultProps);
+
+    expect(queryAllByTestId('sortable-list-item')).toHaveLength(productPreviews.length);
   });
 });

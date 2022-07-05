@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import tokens from '@contentful/forma-36-tokens';
+import tokens from '@contentful/f36-tokens';
 import noop from 'lodash/noop';
-import { Icon, SkeletonContainer, SkeletonImage } from '@contentful/forma-36-react-components';
-import { css } from '@emotion/css';
+import { css } from 'emotion';
 import { activeProductCheck } from '../iconsInBase64';
 import { Product } from '../../interfaces';
+
+import { Icon, SkeletonContainer, SkeletonImage } from '@contentful/f36-components';
+
+import { AssetIcon } from '@contentful/f36-icons';
 
 export interface Props {
   product: Product;
@@ -118,7 +121,7 @@ export const ProductListItem = (props: Props) => {
   const [imageHasErrored, setImageHasErrored] = useState(false);
 
   return (
-    <div className={styles.productWrapper}>
+    <div className={styles.productWrapper} data-test-id="ProductListItem">
       <div
         data-test-id={`product-preview-${product.sku}`}
         role="switch"
@@ -126,7 +129,8 @@ export const ProductListItem = (props: Props) => {
         tabIndex={-1}
         className={`${styles.product} ${isSelected ? styles.selectedProduct : ''}`}
         onKeyUp={noop}
-        onClick={() => selectProduct(product.sku)}>
+        onClick={() => selectProduct(product.sku)}
+      >
         {!imageHasLoaded && !imageHasErrored && (
           <SkeletonContainer className={styles.skeletonImage}>
             <SkeletonImage width={400} height={290} />
@@ -134,7 +138,7 @@ export const ProductListItem = (props: Props) => {
         )}
         {imageHasErrored && (
           <div className={styles.errorImage}>
-            <Icon icon="Asset" />
+            <AssetIcon />
           </div>
         )}
         {!imageHasErrored && (

@@ -1,17 +1,18 @@
-import * as React from 'react';
-import { Button } from '@contentful/forma-36-react-components';
-import tokens from '@contentful/forma-36-tokens';
-import { css } from '@emotion/css';
 import { FieldExtensionSDK } from '@contentful/app-sdk';
-import { SortableComponent } from './SortableComponent';
-import {
-  ProductPreviewsFn,
-  OpenDialogFn,
-  DisabledPredicateFn,
-  MakeCTAFn,
-  Integration
-} from '../interfaces';
+import { Button } from '@contentful/f36-components';
+import { ShoppingCartIcon } from '@contentful/f36-icons';
+import tokens from '@contentful/f36-tokens';
+import { css } from 'emotion';
+import * as React from 'react';
 import { FieldsSkuTypes } from '../AppConfig/fields';
+import {
+  DisabledPredicateFn,
+  Integration,
+  MakeCTAFn,
+  OpenDialogFn,
+  ProductPreviewsFn,
+} from '../interfaces';
+import { SortableComponent } from './SortableComponent';
 
 interface Props {
   sdk: FieldExtensionSDK;
@@ -30,17 +31,17 @@ interface State {
 
 const styles = {
   sortable: css({
-    marginBottom: tokens.spacingM
+    marginBottom: tokens.spacingM,
   }),
   container: css({
-    display: 'flex'
+    display: 'flex',
   }),
   logo: css({
     display: 'block',
     width: '30px',
     height: '30px',
-    marginRight: tokens.spacingM
-  })
+    marginRight: tokens.spacingM,
+  }),
 };
 
 function fieldValueToState(value?: string | string[]): string[] {
@@ -53,7 +54,7 @@ function fieldValueToState(value?: string | string[]): string[] {
 export default class Field extends React.Component<Props, State> {
   state = {
     value: fieldValueToState(this.props.sdk.field.getValue()),
-    editingDisabled: true
+    editingDisabled: true,
   };
 
   componentDidMount() {
@@ -86,7 +87,7 @@ export default class Field extends React.Component<Props, State> {
     const { skuTypes, sdk } = this.props;
     const config = sdk.parameters.installation;
 
-    const defaultSkuType = skuTypes?.find(skuType => skuType.default === true)?.id;
+    const defaultSkuType = skuTypes?.find((skuType) => skuType.default === true)?.id;
     const skuType =
       (config as { skuTypes?: FieldsSkuTypes }).skuTypes?.[sdk.contentType.sys.id]?.[
         sdk.field.id
@@ -96,7 +97,7 @@ export default class Field extends React.Component<Props, State> {
       ...config,
       fieldValue: fieldValueToState(sdk.field.getValue()),
       fieldType: sdk.field.type,
-      skuType
+      skuType,
     });
     if (result.length) {
       this.updateStateValue(result);
@@ -111,7 +112,7 @@ export default class Field extends React.Component<Props, State> {
     const config = sdk.parameters.installation;
     const isDisabled = editingDisabled || this.props.isDisabled(selectedSKUs, config);
 
-    const defaultSkuType = skuTypes?.find(skuType => skuType.default === true)?.id;
+    const defaultSkuType = skuTypes?.find((skuType) => skuType.default === true)?.id;
     const skuType =
       (config as { skuTypes?: FieldsSkuTypes }).skuTypes?.[sdk.contentType.sys.id]?.[
         sdk.field.id
@@ -135,11 +136,12 @@ export default class Field extends React.Component<Props, State> {
         <div className={styles.container}>
           <img src={this.props.logo} alt="Logo" className={styles.logo} />
           <Button
-            icon="ShoppingCart"
-            buttonType="muted"
+            startIcon={<ShoppingCartIcon />}
+            variant="secondary"
             size="small"
             onClick={this.onDialogOpen}
-            disabled={isDisabled}>
+            isDisabled={isDisabled}
+          >
             {this.props.makeCTA(sdk.field.type, skuType)}
           </Button>
         </div>

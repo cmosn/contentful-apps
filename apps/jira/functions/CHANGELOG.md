@@ -3,6 +3,124 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.12](https://github.com/contentful/apps/compare/@contentful/functions@1.4.11...@contentful/functions@1.4.12) (2022-07-05)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.11](https://github.com/contentful/apps/compare/@contentful/functions@1.4.10...@contentful/functions@1.4.11) (2022-07-05)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.10](https://github.com/contentful/apps/compare/@contentful/functions@1.4.9...@contentful/functions@1.4.10) (2022-06-30)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.9](https://github.com/contentful/apps/compare/@contentful/functions@1.4.8...@contentful/functions@1.4.9) (2022-06-02)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.8](https://github.com/contentful/apps/compare/@contentful/functions@1.4.7...@contentful/functions@1.4.8) (2022-04-15)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.7](https://github.com/contentful/apps/compare/@contentful/functions@1.4.6...@contentful/functions@1.4.7) (2022-04-09)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.6](https://github.com/contentful/apps/compare/@contentful/functions@1.4.5...@contentful/functions@1.4.6) (2022-02-17)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.5](https://github.com/contentful/apps/compare/@contentful/functions@1.4.4...@contentful/functions@1.4.5) (2022-02-15)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.4](https://github.com/contentful/apps/compare/@contentful/functions@1.4.3...@contentful/functions@1.4.4) (2022-02-15)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.3](https://github.com/contentful/apps/compare/@contentful/functions@1.4.2...@contentful/functions@1.4.3) (2022-02-15)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.2](https://github.com/contentful/apps/compare/@contentful/functions@1.4.1...@contentful/functions@1.4.2) (2022-02-04)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+## [1.4.1](https://github.com/contentful/apps/compare/@contentful/functions@1.4.0...@contentful/functions@1.4.1) (2022-01-15)
+
+**Note:** Version bump only for package @contentful/functions
+
+
+
+
+
+# 1.4.0 (2022-01-14)
+
+
+### Features
+
+* [EXT-2722] use contentful hosting for image focal point app ([#238](https://github.com/contentful/apps/issues/238)) ([11b57ae](https://github.com/contentful/apps/commit/11b57ae3e4fb5dd376544d89056430b71883517c))
+* [EXT-3415] move all package names to [@contentful](https://github.com/contentful) ([#665](https://github.com/contentful/apps/issues/665)) ([9bd7534](https://github.com/contentful/apps/commit/9bd75340860e59f25b4eed900a832a482508f603))
+* upgrade serverless to v2 ([#451](https://github.com/contentful/apps/issues/451)) ([fa64ac3](https://github.com/contentful/apps/commit/fa64ac34e9a884230bd6f1c71adcb2fdbb778dc8))
+* upgrade serverless to v2 ([#452](https://github.com/contentful/apps/issues/452)) ([24422fd](https://github.com/contentful/apps/commit/24422fd543f765db0167b2b98c61a02d72809008))
+
+
+
+
+
+## [1.3.2](https://github.com/contentful/apps/compare/functions@1.3.1...functions@1.3.2) (2021-10-28)
+
+**Note:** Version bump only for package functions
+
+
+
+
+
 ## [1.3.1](https://github.com/contentful/apps/compare/functions@1.3.0...functions@1.3.1) (2021-09-13)
 
 **Note:** Version bump only for package functions

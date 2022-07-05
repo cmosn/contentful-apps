@@ -1,5 +1,5 @@
 {
-  "name": "backend_app_demo",
+  "name": "@contentful/backend_app_demo",
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "Contentful GmbH",
   "license": "MIT",
   "dependencies": {
-    "@contentful/app-sdk": "3.39.1",
+    "@contentful/app-sdk": "4.4.0",
     "@contentful/forma-36-fcss": "^0.3.3",
     "@contentful/forma-36-react-components": "^3.93.2",
     "@contentful/node-apps-toolkit": "^2.0.0",
@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.5",
     "ts-node": "^10.2.1"
   },
   "browserslist": [

@@ -1,5 +1,5 @@
 {
-  "name": "page-location-example",
+  "name": "@contentful/page-location-example",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -15,19 +15,16 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-router": "5.0.2",
     "@types/react-router-dom": "4.3.4",
-    "cssnano": "4.1.10",
     "eslint": "^6.0.1",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.5",
     "typescript": "3.5.2"
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "format": "prettier --config ./.prettierrc --write src/**/*.tsx"
+    "build": "parcel build src/index.html"
   },
   "dependencies": {
-    "@contentful/app-sdk": "3.39.1",
+    "@contentful/app-sdk": "4.4.0",
     "@contentful/forma-36-fcss": "^0.3.3",
     "@contentful/forma-36-react-components": "^3.93.2",
     "@contentful/forma-36-tokens": "^0.11.0",

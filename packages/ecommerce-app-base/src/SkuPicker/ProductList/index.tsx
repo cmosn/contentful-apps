@@ -1,6 +1,6 @@
 import React from 'react';
-import tokens from '@contentful/forma-36-tokens';
-import { css } from '@emotion/css';
+import tokens from '@contentful/f36-tokens';
+import { css } from 'emotion';
 import { Product } from '../../interfaces';
 import { ProductListItem } from './ProductListItem';
 
@@ -15,17 +15,13 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     marginLeft: `-${tokens.spacingS}`,
-    marginRight: `-${tokens.spacingS}`
-  })
+    marginRight: `-${tokens.spacingS}`,
+  }),
 };
 
-export const ProductList = ({
-  selectProduct,
-  selectedSKUs,
-  products,
-}: Props) => (
+export const ProductList = ({ selectProduct, selectedSKUs, products }: Props) => (
   <div className={styles.productList}>
-    {products.map(product => (
+    {products.map((product) => (
       <ProductListItem
         key={product.id}
         product={product}

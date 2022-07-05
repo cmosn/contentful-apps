@@ -1,16 +1,15 @@
 {
-  "name": "saleor",
-  "version": "1.4.40",
+  "name": "@contentful/saleor",
+  "version": "1.6.80",
   "private": true,
   "devDependencies": {
-    "@contentful/app-scripts": "0.8.11",
-    "contentful-cli": "1.8.23",
+    "@contentful/app-scripts": "0.15.1",
     "cross-env": "7.0.3",
     "react-scripts": "4.0.3"
   },
   "dependencies": {
-    "@contentful/app-sdk": "3.39.1",
-    "@contentful/ecommerce-app-base": "^2.5.26",
+    "@contentful/app-sdk": "4.4.0",
+    "@contentful/ecommerce-app-base": "^3.1.9",
     "@types/lodash": "4.14.161",
     "core-js": "3.4.1",
     "graphql": "15.3.0",
